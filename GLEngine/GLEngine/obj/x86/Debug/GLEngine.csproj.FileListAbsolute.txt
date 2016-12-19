@@ -1,0 +1,6 @@
+C:\Users\i_jem\Documents\GitHub\3D-GameEngine-OpenTK\GLEngine\GLEngine\obj\x86\Debug\GLEngine.exe
+C:\Users\i_jem\Documents\GitHub\3D-GameEngine-OpenTK\GLEngine\GLEngine\bin\Debug\GLEngine.exe
+C:\Users\i_jem\Documents\GitHub\3D-GameEngine-OpenTK\GLEngine\GLEngine\bin\Debug\GLEngine.pdb
+C:\Users\i_jem\Documents\GitHub\3D-GameEngine-OpenTK\GLEngine\GLEngine\bin\Debug\OpenTK.dll
+C:\Users\i_jem\Documents\GitHub\3D-GameEngine-OpenTK\GLEngine\GLEngine\bin\Debug\OpenTK.xml
+C:\Users\i_jem\Documents\GitHub\3D-GameEngine-OpenTK\GLEngine\GLEngine\obj\x86\Debug\GLEngine.pdb

@@ -10,7 +10,7 @@ namespace GLEngine
 
 		protected override void BindAttributes()
 		{
-			base.BindAttribute(0, "position");
+			base.BindAttribute(0, "positions");
 			base.BindAttribute(1, "textureCoords");
 		}
 	}

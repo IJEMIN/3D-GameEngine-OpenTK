@@ -88,8 +88,6 @@ namespace GLEngine
 
 			GL.Flush();
 
-			Console.WriteLine("Update");
-
 
 			window.SwapBuffers();
 		}

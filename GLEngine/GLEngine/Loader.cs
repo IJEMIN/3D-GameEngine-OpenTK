@@ -3,7 +3,6 @@ using System.Drawing;
 using System.Collections.Generic;
 //using OpenTK.Graphics.OpenGL4;
 using OpenTK.Graphics.OpenGL;
-using OpenTK.Platform.MacOS;
 using OpenTK;
 using System.Drawing.Imaging;
 
@@ -82,35 +81,47 @@ namespace GLEngine
 
 		public void CleanUp()
 		{
+            GL.DeleteVertexArrays(1, vbos.ToArray());
+            /*
 			foreach (int vao in vaos)
 			{
-				GL.DeleteVertexArray(vao);
+				GL.DeleteVertexArrays(vao);
 			}
+            */
 
+            GL.DeleteBuffers(1, vbos.ToArray());
+
+            /*
 			foreach (int vbo in vbos)
 			{
-				GL.DeleteBuffer(vbo);
+				GL.DeleteBuffers(vbo);
 			}
+            */
 
+            GL.DeleteTextures(1, textures.ToArray());
+            /*
 			foreach (int texture in textures)
 			{
 				GL.DeleteTexture(texture);
 			}
+            */
 		}
 
 		private void StoreDataInAttributeList(int attributeNumber, int coordinateSize, float[] data)
 		{
 			int vboID;
 			GL.GenBuffers(1, out vboID);
-			vbos.Add(vboID);
-			GL.BindBuffer(BufferTarget.ArrayBuffer, vboID);
+
+            Console.WriteLine(vboID);
+
+            vbos.Add(vboID);
+
+            GL.BindBuffer(BufferTarget.ArrayBuffer, vboID);
 
 			GL.BufferData(BufferTarget.ArrayBuffer, (IntPtr)(data.Length * sizeof(float)) ,data, BufferUsageHint.StaticDraw);
 
 			GL.VertexAttribPointer(attributeNumber, coordinateSize,VertexAttribPointerType.Float, false, 0, 0);
 			GL.BindBuffer(BufferTarget.ArrayBuffer, 0);
-
-
 
 		}
 
